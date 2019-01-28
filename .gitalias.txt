@@ -1,0 +1,22 @@
+# ## Usage
+#
+# Typical usage for a typical user:
+#
+#   * Save this file as a dot file in your home directory: `~/.gitalias.txt`
+#
+#   * Edit your git config dot file in your home directory such as  `~/.gitconfig`
+#
+#   * Include the path to this file.
+#
+
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	mt = mergetool
+	rh = reset HEAD --hard
+  pr = pull --rebase
+  ri = rebase -i
+	cp = cherry-pick
+  fixup = "!f() { TARGET=$(git rev-parse \"$1\"); git commit --fixup=$TARGET && GIT_EDITOR=true git rebase --interactive --autosquash $TARGET~;
